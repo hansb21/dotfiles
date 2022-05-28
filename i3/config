@@ -145,8 +145,7 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-# reload the configuration file
-bindsym $mod+Shift+c reload
+# reload the configuration file bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
@@ -179,7 +178,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
+exec --no-startup-id redshift -l 27.5:48.5 -t 6000:3000 &
+exec --no-startup-id nohup flameshot &
+
+
+# Start i3bar to display a workspace ar (plus the system information i3status
 # finds out, if available)
 bar {
         status_command i3status
